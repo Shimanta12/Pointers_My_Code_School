@@ -2,6 +2,11 @@
 #include <stdlib.h>
 #include <time.h>
 
+/*
+
+Mmeory leak is improper use of dynamic memory or the heap section of memory that causes thememory consumption of our program to increase over a period of time. Remember memroy leak always happens because of unused and unreferenced memroy blocks in the heap. Anything on the stack  is deallcated automatically and stack size is fixed in size. At the most we can have an overflow in stack.
+ */
+
 int cash = 100;
 
 void play(int bet)
@@ -30,7 +35,7 @@ void play(int bet)
         cash -= bet;
         printf("You Loose ! Result = | %c%c%c | Total Cash = %d", C[0], C[1], C[2], cash);
     }
-    free(C); // We are making a call to the free function passing it the address of this memory block this array C.
+    free(C); // We are making a call to the free function passing it the address of this memory block this array C. If we were not using free then the memory would have shot up like anything. The memory consumption would have shot up like anything. But because we are freeing at the end of the function, its not going up. There is no memroy leak.
 }
 
 int main()
