@@ -14,7 +14,7 @@ int main()
 
     Heap has nothing to do with heap data structure.
 
-    Heap is also called dynamic memory and using heap is refered to  as dynamic memory allcation.
+    Heap is also called dynamic memory and using heap is refered to as dynamic memory allocation.
 
     To use dynamic memory in "C" we need to know four function:
         --> malloc()
@@ -28,11 +28,11 @@ int main()
      */
     int a = 10; // goes on stack
     int *p;
-    p = (int *)malloc(sizeof(int)); // Storing on the heap. malloc() function asks for how much memory to allocate in the heap in bytes. In this statement malloc will allocate a block of memory of 4 bytes and return a void pointer to the base address of the allocated block. And we have to typecast it to an integer pointer(Type is important).
+    p = (int *)malloc(sizeof(int)); // Storing on the heap. malloc() function asks for how much memory to allocate in the heap in bytes. In this statement malloc will allocate a block of memory of 4 bytes and return a void pointer to the base address of the allocated block. And we have to typecast it to an integer pointer(Type is important), and also because we cant do dereferencing and pointer arithmatic on void pointers.
 
     *p = 20;
     // Only way to use memory on heap is by reference.
-    free(p); // Read below comment text.
+    free(p); // Read the text below.
 
     p = (int *)malloc(sizeof(int)); // When we make one more call to malloc, one more block of 4 bytes is allocated on the heap and we are storing the base address of that allocated block in p. But the previous block will still sits in the heap. This memory we are still consuming, it will not be cleared off automatically. At any part of our program if we are done using some block of memory which is dynamically allocated using malloc, we also need to clear it, beacuse it is unnecessary consumption of memory which is an important resource. That is why we have to free the allocated memory by calling the function free() and pass the pointer of that allocated block.
 

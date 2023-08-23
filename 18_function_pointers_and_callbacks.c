@@ -1,6 +1,6 @@
 #include <stdio.h>
 /*
-Function pointers can be passed as arguments to funcitons. And then a funciton that would recieve a function pointer as argument can call back the function that this pointer will point to.
+Function pointers can be passed as arguments to functions. And then a funciton that would recieve a function pointer as argument can call back the function that this pointer will point to.
  */
 
 void A()

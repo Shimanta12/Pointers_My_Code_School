@@ -5,11 +5,10 @@ int main()
     int B[2][3] = {{1, 2, 3}, {4, 5, 6}}; // Array of array. We are creating two one dimmensional array of three element each.
     /*
     Name of the array returns a pointer to the first element in the array. But this time each element is not a interger, each element is a one dimmensional array of 3 integer.
-    int *p=b; // this statement will give compilation error. Because b will return a pointer to 1D array of 3 integers, not just a pointer to integer.
+    int *p=B; // this statement will give compilation error. Because B will return a pointer to 1D array of 3 integers, not just a pointer to integer.
 
     Type of a pointer matters, not when you have to read the address. It matters when you have to dereference or when you perform pointer arithmatic.
      */
-
     int(*p)[3] = B;                           // Defining pointer to array of 1D array of 3 integers.
     printf("%d %d\n", B, &B[0]);              // same
     printf("%d %d %d\n", *B, B[0], &B[0][0]); // Here B[0] is the variable name for the one dimmensional array of three integers. So using the name B[0] will give us the pointer to the first element in the array B[0] which is &B[0][0] All returns pointer to an integer (int *)

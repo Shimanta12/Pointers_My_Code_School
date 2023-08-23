@@ -19,7 +19,7 @@ int main()
 
     // Way 2
     int (*ptr2)(int, int); // pointer to function that should take (int, int) as arguments and return int
-    ptr2 = add;            // function identifier basically returning the base address of the function.
+    ptr2 = add;            // Name of a function returns a pointer .
     int c = ptr2(2, 3);
     printf("%d\n", c);
     return 0;

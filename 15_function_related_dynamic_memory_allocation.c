@@ -27,14 +27,14 @@ int main()
     }
     free(A);
     A[2] = 6; // Even after freeing the allocated memory we can modify the value at this particular address. This is dangerous.
-    A = NULL; // after free, adjust pointer to NULL.
+    A = NULL; // That is why after free, adjust pointer to NULL.
 
     // We should always be sure to use the memory that is allocasted, otherwise its like shooting in the dark, we do not know what will happen.
 
     A = (int *)realloc(A, 2 * n * sizeof(int)); // How realloc works is that if the size of the new block is greater than the size of the previous block, then if it is possible to extend the previous block, find some consecutive memory with the same block, then the previous block itself is extended. Else, a new block is allocated and the previous block, the content from the previous block is copied and the previous block is de-allocated.
 
     // A=(int*) realloc(A, 0); //this statement is equivalent to the statement free(A).
-    // A=(int*) realloc(null, 2*n*sizeof(int)); // this is equivalent to calling malloc. This only creates a new block, does not copy anything from the previous block.
+    // A=(int*) realloc(NULL, 2*n*sizeof(int)); // this is equivalent to calling malloc. This only creates a new block, does not copy anything from the previous block.
     // So the realloc can be used with the right arguments as substitute for free as well as substitute for malloc.
     for (int i = 0; i < 2 * n; i++)
     {

@@ -4,7 +4,7 @@
 
 /*
 
-Mmeory leak is improper use of dynamic memory or the heap section of memory that causes thememory consumption of our program to increase over a period of time. Remember memroy leak always happens because of unused and unreferenced memroy blocks in the heap. Anything on the stack  is deallcated automatically and stack size is fixed in size. At the most we can have an overflow in stack.
+Mmeory leak is improper use of dynamic memory or the heap section of memory that causes the memory consumption of our program to increase over a period of time. Remember memory leak always happens because of unused and unreferenced memory blocks in the heap. Anything on the stack  is deallcated automatically and stack size is fixed in size. At the most we can have an overflow in stack.
  */
 
 int cash = 100;
